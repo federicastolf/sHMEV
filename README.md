@@ -5,4 +5,4 @@
  * **codes**: folder containing the R scripts  to run the analysis on the synthetic data and on the North Carolina rainfall data. It also contains the
     stan code implementing the sHMEV model.
     
-    Preprint of manuscript: https://arxiv.org/abs/2205.01499
+ Preprint of manuscript: https://arxiv.org/abs/2205.01499
