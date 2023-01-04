@@ -50,7 +50,7 @@ dtsim = simul_data(ny_train, S, ptrue, lambda, dist = "wei")
 dvsim = simul_data(ny_test, S, ptrue, lambda, dist = "wei")
 
 
-#--- scenario 2 (GAM) ---#
+#--- scenario 2 (GM) ---#
 
 ptrue_gam = list(a = 0.9 + 0.15*lat + 0.5*long,
                  b = 0.15 - 0.1*lat + 0.05*long)
@@ -242,7 +242,7 @@ for(i in 1:S){
   mbias_sim1 = rbind(mbias_sim1, adt_b)
 }
 
-#--- scenario 2 (GAM) ---#
+#--- scenario 2 (GM) ---#
 
 fse_sim_gam = mbias_sim_gam = mwidth_sim_gam = NULL
 
@@ -315,7 +315,7 @@ for(i in 1:27){
 
 # FSE
 fse_sim1$spec = rep("WEI", nrow(fse_sim1))
-fse_sim_gam$spec = rep("GAM", nrow(fse_sim_gam))
+fse_sim_gam$spec = rep("GM", nrow(fse_sim_gam))
 fse_sim_wgp$spec = rep("WEIgp", nrow(fse_sim_wgp))
 fse_sim = rbind(fse_sim1, fse_sim_gam, fse_sim_wgp)
 fse_sim$spec = as.factor(fse_sim$spec)
@@ -337,7 +337,7 @@ fse_plot
 
 # mbias
 mbias_sim1$spec = rep("WEI", nrow(mbias_sim1))
-mbias_sim_gam$spec = rep("GAM", nrow(mbias_sim_gam))
+mbias_sim_gam$spec = rep("GM", nrow(mbias_sim_gam))
 mbias_sim_wgp$spec = rep("WEIgp", nrow(mbias_sim_wgp))
 mbias_sim1 = rbind(mbias_sim1, mbias_sim_gam, mbias_sim_wgp)
 mbias_sim1$spec = as.factor(mbias_sim1$spec)
@@ -361,7 +361,7 @@ mbias_plot
 
 # mwidth
 mwidth_sim1$spec = rep("WEI", nrow(mwidth_sim1))
-mwidth_sim_gam$spec = rep("GAM", nrow(mwidth_sim_gam))
+mwidth_sim_gam$spec = rep("GM", nrow(mwidth_sim_gam))
 mwidth_sim_wgp$spec = rep("WEIgp", nrow(mwidth_sim_wgp))
 mwidth_sim1 = rbind(mwidth_sim1, mwidth_sim_gam, mwidth_sim_wgp)
 mwidth_sim1$spec = as.factor(mwidth_sim1$spec)
