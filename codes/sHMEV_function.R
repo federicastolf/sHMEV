@@ -27,7 +27,7 @@ gridPoints = function(name_state, cell_size = 0.1) {
   It also compute elevation for each point of the grid.
   ----------------------------------------------------------------------"
   us = getData('GADM', country = 'US', level = 1)
-  nc = us[us$NAME_1 == area, ]
+  nc = us[us$NAME_1 == name_state, ]
   
   # Create a grid of points within the bbox of the SpatialPolygonsDataFrame
   grid = makegrid(nc, cellsize = cell_size) # cellsize in map units
